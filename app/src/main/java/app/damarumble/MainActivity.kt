@@ -68,6 +68,7 @@ class MainActivity : ComponentActivity() {
             }
         }
         web.addJavascriptInterface(MasterBridge(), "MasterBridge")
+        web.setDefaultFocusHighlightEnabled(false) // tira o quadro azul de foco ao tocar
         root.addView(web, FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT
         ))

@@ -13,7 +13,8 @@
   const log = ev => { LOG.push(Object.assign({ at: Date.now(), user: (typeof S !== 'undefined' && S.user) ? S.user.username : null, match: (typeof GM !== 'undefined' && GM.info) ? GM.info.id : null, game: (typeof GM !== 'undefined' && GM.kind) || null, assist: on }, ev)); saveLog(); };
   let on = true;
   const css = document.createElement('style');
-  css.textContent = `#mst{position:fixed;left:8px;bottom:78px;z-index:99999;background:rgba(20,10,40,.92);color:#fff;border:1px solid #00e5ff;border-radius:12px;padding:6px 8px;font:600 12px system-ui;display:flex;gap:6px;align-items:center;max-width:92vw;flex-wrap:wrap}
+  css.textContent = `*{-webkit-tap-highlight-color:transparent!important}*:focus,*:focus-visible{outline:none!important}canvas,iframe,.sq,.tile,button{-webkit-tap-highlight-color:transparent!important;outline:none!important}
+#mst{position:fixed;left:8px;bottom:78px;z-index:99999;background:rgba(20,10,40,.92);color:#fff;border:1px solid #00e5ff;border-radius:12px;padding:6px 8px;font:600 12px system-ui;display:flex;gap:6px;align-items:center;max-width:92vw;flex-wrap:wrap}
 #mst b{color:#00e5ff}#mst button{background:#1d1840;color:#fff;border:1px solid #4b4390;border-radius:8px;padding:4px 8px;font:600 12px system-ui}
 #mst.lock{border-color:#ff5d6c}#mst.lock b{color:#ff5d6c}
 .sq.mfrom{box-shadow:inset 0 0 0 5px #00e5ff!important}.sq.mto::before{content:"";position:absolute;inset:14%;border-radius:50%;border:5px solid #00e5ff;background:rgba(0,229,255,.28);z-index:3;pointer-events:none}`;
